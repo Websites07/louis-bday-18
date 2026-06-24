@@ -1,10 +1,15 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bx:#6f1b21;--cr:#FDF5E6;--go:#D4AF37;--dk:#3A0D16}
-body,html{background:var(--bx)}
-.wrap{font-family:'Montserrat',sans-serif;background:var(--bx);color:var(--cr);width:100%}
+:root{--bx:#6f1b21;--cr:#ffffff;--go:#D4AF37;--dk:#3A0D16}
+html,body{background:var(--bx);min-height:100%;width:100%;overflow-x:hidden;color:var(--cr)}
+.wrap{font-family:'Montserrat',sans-serif;background:var(--bx);color:var(--cr);width:100%;max-width:100%}
 
 /* HERO */
 .hero{padding:5rem 1.5rem 4rem;text-align:center;position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;border-bottom:1px solid rgba(212,175,55,.2)}
@@ -51,22 +56,24 @@ body,html{background:var(--bx)}
 .lieu-block{margin-top:2.5rem;text-align:center}
 .addrtxt{font-family:'Playfair Display',serif;font-size:2rem;line-height:1.4;margin-bottom:.75rem}
 .addrdet{font-size:1rem;line-height:1.8;opacity:.85}
-.mapbtn{display:inline-flex;align-items:center;gap:8px;margin-top:1.5rem;padding:.75rem 1.6rem;border:2px solid var(--go);border-radius:50px;color:var(--go);font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s}
-.mapbtn:hover{background:var(--go);color:var(--bx)}
+.mapbtn{display:inline-flex;align-items:center;gap:8px;margin-top:1.5rem;padding:.75rem 1.6rem;border:2px solid var(--go);border-radius:50px;color:var(--cr);font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s}
+.mapbtn:hover{background:var(--go);color:var(--cr)}
 .mapbox{border-radius:18px;border:1px solid rgba(212,175,55,.25);height:220px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--cr);font-size:.9rem;opacity:.75;cursor:pointer;margin-top:1.5rem;transition:opacity .3s}
 .mapbox:hover{opacity:1}
 .mapbox i{font-size:3rem;color:var(--go)}
 
 /* SALLE PHOTO */
-.imgframe{border-radius:20px;overflow:hidden;border:2px solid rgba(212,175,55,.25);margin-top:2.5rem;box-shadow:0 20px 50px rgba(0,0,0,.4)}
-.imgframe img{width:100%;height:300px;object-fit:cover;display:block}
+.imgframe{border-radius:20px;overflow:hidden;border:2px solid rgba(212,175,55,.25);margin-top:2.5rem;box-shadow:0 20px 50px rgba(0,0,0,.4);min-height:300px}
+.imgframe img{width:100%;height:100%;object-fit:cover;display:block}
+.imgframe.portrait{max-width:320px;aspect-ratio:3 / 4}
+.imgframe.portrait img{object-position:center}
 .imgcap{font-size:.85rem;font-style:italic;opacity:.7;text-align:center;margin-top:1rem;line-height:1.5}
 
 /* PROGRAMME */
 .prog-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:0}
 .prog-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.8rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .prog-item:last-child{border-bottom:none}
-.prog-time{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--go);min-width:70px;padding-top:.1rem}
+.prog-time{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--cr);min-width:70px;padding-top:.1rem}
 .prog-info{}
 .prog-name{font-size:1rem;font-weight:600;margin-bottom:.25rem}
 .prog-desc{font-size:.85rem;opacity:.7;line-height:1.5}
@@ -80,9 +87,10 @@ body,html{background:var(--bx)}
 .rsvpcard{background:rgba(255,255,255,.1);padding:2.5rem 1.5rem;border-radius:24px;text-align:center;border:1px solid rgba(212,175,55,.2);margin-top:2.5rem}
 .rsvpmsg{font-size:1rem;line-height:1.8;margin-bottom:1.5rem;opacity:.9}
 .rsvpname{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;margin-bottom:.5rem}
-.rsvptel{font-size:1.5rem;font-weight:600;color:var(--go);text-decoration:none;display:inline-block;padding:.5rem 1.4rem;border:2px solid var(--go);border-radius:50px;transition:all .3s;margin-top:.25rem}
-.rsvptel:hover{background:var(--go);color:var(--bx)}
-.iglink{color:var(--go);text-decoration:none;font-weight:600;font-size:.9rem;margin-top:1rem;display:inline-flex;align-items:center;gap:6px;opacity:.9}
+.rsvptel{font-size:1.5rem;font-weight:600;color:var(--cr);text-decoration:none;display:inline-block;padding:.5rem 1.4rem;border:2px solid var(--go);border-radius:50px;transition:all .3s;margin-top:.25rem}
+.rsvptel:hover{background:var(--go);color:var(--cr)}
+.iglink{color:var(--cr);text-decoration:none;font-weight:600;font-size:.9rem;margin-top:1rem;display:inline-flex;align-items:center;gap:6px;opacity:.9}
+.iglink i{color:var(--go)}
 .rsvpdl{font-size:.8rem;opacity:.6;margin-top:1.5rem;line-height:1.5}
 
 /* FOOTER */
@@ -90,10 +98,39 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
 .ftmsg{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;margin-bottom:1rem}
 .ftgline{width:50px;height:2px;background:var(--go);margin:.75rem auto}
 .ftsm{font-size:.7rem;opacity:.5;letter-spacing:2px}
+
+@media (max-width: 768px){
+  .hero{padding:4rem 1rem 2.5rem}
+  .hero{min-height:auto}
+  .htitle{font-size:3.8rem}
+  .hname{font-size:2.2rem}
+  .stitle{font-size:1.9rem}
+  .sec, .sec-full{padding:3rem 1rem}
+  .cdflex{gap:.75rem}
+  .cdval{font-size:2.3rem;min-width:60px;padding:.65rem .85rem}
+  .addrtxt{font-size:1.6rem}
+  .mapbtn{width:100%;justify-content:center}
+  .mapbox{width:100%;height:auto;padding:1.25rem 1rem}
+  .imgframe{max-width:100%}
+  .imgframe.portrait{max-width:320px}
+}
+@media (max-width: 480px){
+  .hero{padding:3rem 1rem 2rem}
+  .htitle{font-size:3rem}
+  .hname{font-size:1.8rem}
+  .gline{margin:1rem auto .5rem}
+  .stitle{font-size:1.7rem}
+  .sec, .sec-full{padding:2.5rem 1rem}
+  .cdval{font-size:2rem}
+  .addrtxt{font-size:1.4rem}
+  .mapbtn{font-size:.92rem}
+  .imgframe{min-height:260px}
+  .imgframe.portrait{max-width:100%}
+  .rsvpcard{padding:2rem 1rem}
+}
 </style>
-
-<div class="wrap">
-
+</head>
+<body>
   <!-- HERO -->
   <header class="hero">
     <span class="spk s1"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
@@ -138,7 +175,7 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
           <div class="dico"><i class="ti ti-calendar-event" aria-hidden="true"></i></div>
           <p class="dlbl">Date</p>
           <p class="dval">Samedi 5 Septembre</p>
-          <p class="ddet">2026 — soirée à partir de 19h</p>
+          <p class="ddet">2026</p>
         </div>
         <div class="dcard">
           <div class="dico"><i class="ti ti-confetti" aria-hidden="true"></i></div>
@@ -180,10 +217,10 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
       <div class="imgframe">
         <img src="https://new.express.adobe.com/webpage/ubBoak0mqhdLQ/resources/8b238808-0bbb-4bf7-9bad-55565f1580db-img_6572_png?asset_id=bb70c838-6d89-4387-91b5-23c342920e9b&img_etag=%222d7a0c5a918742a4b5d420b6e7779488%22&image_assets=false&size=2560" alt="Salle de fête décorée" onerror="this.parentElement.innerHTML='<div style=\'height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:#FDF5E6;opacity:.6\'><i class=\'ti ti-photo\' style=\'font-size:3rem;color:#D4AF37\'></i><span>Photo de la salle</span></div>'"/>
       </div>
-      <p class="imgcap">La Salle du Bois II, Nyoiseau — décoration prévue pour la soirée du 5 septembre</p>
+      <p class="imgcap">La Salle du Bois II, Nyoiseau </p>
       <div style="margin-top:2rem;display:flex;justify-content:center">
-        <div class="imgframe" style="margin-top:0;max-width:320px;height:480px;overflow:hidden">
-          <img src="https://new.express.adobe.com/webpage/ubBoak0mqhdLQ/resources/f7017a63-7564-42ba-a120-2e89c29201d4-img_6566_png?asset_id=fc4d8eaf-430b-4800-8482-8abadb920538&img_etag=%22975ea25848a44652a01a15e7c51aaff5%22&image_assets=false&size=1024" alt="Salle vue 2" style="width:100%;height:100%;object-fit:cover;object-position:center;" onerror="this.parentElement.style.display='none'"/>
+        <div class="imgframe portrait" style="margin-top:0;">
+          <img src="https://new.express.adobe.com/webpage/ubBoak0mqhdLQ/resources/f7017a63-7564-42ba-a120-2e89c29201d4-img_6566_png?asset_id=fc4d8eaf-430b-4800-8482-8abadb920538&img_etag=%22975ea25848a44652a01a15e7c51aaff5%22&image_assets=false&size=1024" alt="Salle vue 2" onerror="this.parentElement.style.display='none'"/>
         </div>
       </div>
     </div>
@@ -228,3 +265,5 @@ function tick(){
 }
 tick();setInterval(tick,1000);
 </script>
+</body>
+</html>
