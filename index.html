@@ -1,100 +1,94 @@
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bx:#6f1b21;--cr:#FDF5E6;--go:#D4AF37;--dk:#3A0D16}
-body,html{background:var(--bx)}
-.wrap{font-family:'Montserrat',sans-serif;background:var(--bx);color:var(--cr);width:100%}
+body,html{background:var(--bx);-webkit-text-size-adjust:100%}
+.wrap{font-family:'Montserrat',sans-serif;background:var(--bx);color:var(--cr);width:100%;overflow-x:hidden}
 
 /* HERO */
-.hero{padding:5rem 1.5rem 4rem;text-align:center;position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;border-bottom:1px solid rgba(212,175,55,.2)}
+.hero{padding:3rem 1rem 2rem;text-align:center;position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;border-bottom:1px solid rgba(212,175,55,.2)}
 .spk{position:absolute;color:var(--go);animation:spk 2s ease-in-out infinite}
 @keyframes spk{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1.3)}}
-.s1{top:10%;left:7%;animation-delay:0s;font-size:20px}
-.s2{top:20%;right:9%;animation-delay:.4s;font-size:14px}
-.s3{top:45%;left:5%;animation-delay:.9s;font-size:16px}
-.s4{top:55%;right:6%;animation-delay:1.4s;font-size:12px}
-.s5{bottom:30%;left:18%;animation-delay:.7s;font-size:18px}
-.s6{bottom:20%;right:15%;animation-delay:1.8s;font-size:13px}
-.disco-wrap{margin-bottom:2rem}
-.disco-svg{animation:swing 3s ease-in-out infinite}
+.s1{top:8%;left:6%;animation-delay:0s;font-size:16px}
+.s2{top:15%;right:8%;animation-delay:.4s;font-size:12px}
+.s3{top:40%;left:4%;animation-delay:.9s;font-size:14px}
+.s4{top:50%;right:5%;animation-delay:1.4s;font-size:11px}
+.s5{bottom:25%;left:12%;animation-delay:.7s;font-size:15px}
+.s6{bottom:15%;right:10%;animation-delay:1.8s;font-size:12px}
+.disco-wrap{margin-bottom:1.5rem}
+.disco-svg{animation:swing 3s ease-in-out infinite;width:80px;height:100px}
 @keyframes swing{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
-.hsub{font-size:.85rem;letter-spacing:4px;text-transform:uppercase;opacity:.8;margin-bottom:.75rem}
-.htitle{font-family:'Playfair Display',serif;font-size:5.5rem;font-style:italic;font-weight:400;line-height:1;color:var(--cr)}
-.gline{width:60px;height:2px;background:var(--go);margin:1.5rem auto .75rem}
-.hage{font-size:.85rem;letter-spacing:3px;text-transform:uppercase;opacity:.75;margin-bottom:.5rem}
-.hname{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700}
-.scroll-hint{margin-top:3rem;opacity:.45;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
+.hsub{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;opacity:.8;margin-bottom:.5rem}
+.htitle{font-family:'Playfair Display',serif;font-size:3.5rem;font-style:italic;font-weight:400;line-height:1.1;color:var(--cr);word-break:break-word}
+.gline{width:50px;height:2px;background:var(--go);margin:1.2rem auto .75rem}
+.hage{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.75;margin-bottom:.4rem}
+.hname{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700}
+.scroll-hint{margin-top:2rem;opacity:.45;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
 /* SECTIONS */
-.sec{padding:5rem 1.5rem;border-bottom:1px solid rgba(212,175,55,.15);max-width:500px;margin:0 auto}
-.sec-full{padding:5rem 1.5rem;border-bottom:1px solid rgba(212,175,55,.15)}
-.stitle{font-family:'Playfair Display',serif;font-size:2.2rem;text-align:center;margin-bottom:.5rem;color:var(--cr)}
-.stitle::after{content:'';display:block;width:50px;height:2px;background:var(--go);margin:.75rem auto 0}
+.sec{padding:3.5rem 1.2rem;border-bottom:1px solid rgba(212,175,55,.15);max-width:100%;margin:0 auto}
+.sec-full{padding:3.5rem 1.2rem;border-bottom:1px solid rgba(212,175,55,.15)}
+.stitle{font-family:'Playfair Display',serif;font-size:2rem;text-align:center;margin-bottom:.5rem;color:var(--cr)}
+.stitle::after{content:'';display:block;width:40px;height:2px;background:var(--go);margin:.75rem auto 0}
 
 /* COUNTDOWN */
-.cdflex{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
-.cditem{text-align:center;min-width:68px}
-.cdval{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;display:block;background:rgba(255,255,255,.1);padding:.75rem 1rem;border-radius:14px;min-width:74px}
-.cdlbl{font-size:.65rem;text-transform:uppercase;letter-spacing:2px;margin-top:.5rem;opacity:.65}
+.cdflex{display:flex;justify-content:center;gap:0.5rem;flex-wrap:nowrap;margin-top:2rem}
+.cditem{text-align:center;flex:1;max-width:75px}
+.cdval{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;display:block;background:rgba(255,255,255,.1);padding:.6rem .4rem;border-radius:10px}
+.cdlbl{font-size:.6rem;text-transform:uppercase;letter-spacing:1px;margin-top:.4rem;opacity:.65}
 
 /* DATE CARDS */
-.dcards{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2.5rem}
-.dcard{background:rgba(255,255,255,.09);padding:2rem 1.5rem;border-radius:20px;text-align:center;border:1px solid rgba(212,175,55,.15)}
-.dico{font-size:2.5rem;color:var(--go);margin-bottom:.75rem}
-.dlbl{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;opacity:.7;margin-bottom:.35rem}
-.dval{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1.2}
-.ddet{font-size:.9rem;opacity:.8;margin-top:.35rem;line-height:1.5}
+.dcards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+.dcard{background:rgba(255,255,255,.09);padding:1.5rem 1.2rem;border-radius:16px;text-align:center;border:1px solid rgba(212,175,55,.15)}
+.dico{font-size:2rem;color:var(--go);margin-bottom:.5rem}
+.dlbl{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;opacity:.7;margin-bottom:.25rem}
+.dval{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;line-height:1.2}
+.ddet{font-size:.85rem;opacity:.8;margin-top:.35rem;line-height:1.4}
 
 /* LIEU */
-.lieu-block{margin-top:2.5rem;text-align:center}
-.addrtxt{font-family:'Playfair Display',serif;font-size:2rem;line-height:1.4;margin-bottom:.75rem}
-.addrdet{font-size:1rem;line-height:1.8;opacity:.85}
-.mapbtn{display:inline-flex;align-items:center;gap:8px;margin-top:1.5rem;padding:.75rem 1.6rem;border:2px solid var(--go);border-radius:50px;color:var(--go);font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s}
+.lieu-block{margin-top:2rem;text-align:center}
+.addrtxt{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.3;margin-bottom:.75rem}
+.addrdet{font-size:.9rem;line-height:1.6;opacity:.85}
+.mapbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:1.2rem;padding:.75rem 1.4rem;border:2px solid var(--go);border-radius:50px;color:var(--go);font-family:'Montserrat',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;width:100%;max-width:280px;transition:all .3s}
 .mapbtn:hover{background:var(--go);color:var(--bx)}
-.mapbox{border-radius:18px;border:1px solid rgba(212,175,55,.25);height:220px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--cr);font-size:.9rem;opacity:.75;cursor:pointer;margin-top:1.5rem;transition:opacity .3s}
-.mapbox:hover{opacity:1}
-.mapbox i{font-size:3rem;color:var(--go)}
+.mapbox{border-radius:16px;border:1px solid rgba(212,175,55,.25);height:180px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;color:var(--cr);font-size:.85rem;opacity:.8;cursor:pointer;margin-top:1.2rem;padding:1rem;transition:opacity .3s}
+.mapbox i{font-size:2.5rem;color:var(--go)}
 
 /* SALLE PHOTO */
-.imgframe{border-radius:20px;overflow:hidden;border:2px solid rgba(212,175,55,.25);margin-top:2.5rem;box-shadow:0 20px 50px rgba(0,0,0,.4)}
-.imgframe img{width:100%;height:300px;object-fit:cover;display:block}
-.imgcap{font-size:.85rem;font-style:italic;opacity:.7;text-align:center;margin-top:1rem;line-height:1.5}
-
-/* PROGRAMME */
-.prog-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:0}
-.prog-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.8rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.prog-item:last-child{border-bottom:none}
-.prog-time{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--go);min-width:70px;padding-top:.1rem}
-.prog-info{}
-.prog-name{font-size:1rem;font-weight:600;margin-bottom:.25rem}
-.prog-desc{font-size:.85rem;opacity:.7;line-height:1.5}
+.imgframe{border-radius:16px;overflow:hidden;border:2px solid rgba(212,175,55,.25);margin-top:2rem;box-shadow:0 15px 35px rgba(0,0,0,.4)}
+.imgframe img{width:100%;height:220px;object-fit:cover;display:block}
+.imgcap{font-size:.8rem;font-style:italic;opacity:.7;text-align:center;margin-top:.75rem;line-height:1.4;padding:0 .5rem}
 
 /* QUOTE */
-.quote-sec{background:var(--dk);padding:5rem 2rem;text-align:center;border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15)}
-.quote-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:1.6rem;line-height:1.6;max-width:340px;margin:0 auto}
-.quote-auth{margin-top:1.5rem;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.6}
+.quote-sec{background:var(--dk);padding:4rem 1.5rem;text-align:center;border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15)}
+.quote-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;line-height:1.5;max-width:100%;margin:0 auto}
+.quote-auth{margin-top:1.2rem;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;opacity:.6}
 
 /* RSVP */
-.rsvpcard{background:rgba(255,255,255,.1);padding:2.5rem 1.5rem;border-radius:24px;text-align:center;border:1px solid rgba(212,175,55,.2);margin-top:2.5rem}
-.rsvpmsg{font-size:1rem;line-height:1.8;margin-bottom:1.5rem;opacity:.9}
-.rsvpname{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;margin-bottom:.5rem}
-.rsvptel{font-size:1.5rem;font-weight:600;color:var(--go);text-decoration:none;display:inline-block;padding:.5rem 1.4rem;border:2px solid var(--go);border-radius:50px;transition:all .3s;margin-top:.25rem}
+.rsvpcard{background:rgba(255,255,255,.1);padding:2rem 1.2rem;border-radius:20px;text-align:center;border:1px solid rgba(212,175,55,.2);margin-top:2rem}
+.rsvpmsg{font-size:.9rem;line-height:1.6;margin-bottom:1.2rem;opacity:.9}
+.rsvpname{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;margin-bottom:.5rem}
+.rsvptel{font-size:1.3rem;font-weight:600;color:var(--go);text-decoration:none;display:inline-block;padding:.5rem 1.2rem;border:2px solid var(--go);border-radius:50px;transition:all .3s;margin-top:.25rem;width:100%;max-width:240px}
 .rsvptel:hover{background:var(--go);color:var(--bx)}
-.iglink{color:var(--go);text-decoration:none;font-weight:600;font-size:.9rem;margin-top:1rem;display:inline-flex;align-items:center;gap:6px;opacity:.9}
-.rsvpdl{font-size:.8rem;opacity:.6;margin-top:1.5rem;line-height:1.5}
+.iglink{color:var(--go);text-decoration:none;font-weight:600;font-size:.85rem;margin-top:1rem;display:inline-flex;align-items:center;gap:6px;opacity:.9}
+.rsvpdl{font-size:.75rem;opacity:.6;margin-top:1.2rem;line-height:1.4}
 
 /* FOOTER */
-footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
-.ftmsg{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;margin-bottom:1rem}
-.ftgline{width:50px;height:2px;background:var(--go);margin:.75rem auto}
-.ftsm{font-size:.7rem;opacity:.5;letter-spacing:2px}
+footer{background:var(--dk);padding:3rem 1.2rem;text-align:center}
+.ftmsg{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;margin-bottom:1rem}
+.ftgline{width:40px;height:2px;background:var(--go);margin:.75rem auto}
+.ftsm{font-size:.65rem;opacity:.5;letter-spacing:1px;line-height:1.4}
+
+/* Ajustement pour les très petits écrans */
+@media (max-width: 360px) {
+  .htitle { font-size: 2.8rem; }
+  .cdval { font-size: 1.5rem; }
+}
 </style>
 
 <div class="wrap">
 
-  <!-- HERO -->
   <header class="hero">
     <span class="spk s1"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
     <span class="spk s2"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
@@ -103,7 +97,7 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
     <span class="spk s5"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
     <span class="spk s6"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
     <div class="disco-wrap">
-      <svg class="disco-svg" viewBox="0 0 100 120" fill="none" stroke="#FDF5E6" stroke-width="1.4" width="100" height="120">
+      <svg class="disco-svg" viewBox="0 0 100 120" fill="none" stroke="#FDF5E6" stroke-width="1.4">
         <line x1="50" y1="0" x2="50" y2="20"/>
         <circle cx="50" cy="60" r="38"/>
         <ellipse cx="50" cy="35" rx="35" ry="8"/>
@@ -123,22 +117,21 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
     </div>
   </header>
 
-  <!-- COUNTDOWN -->
   <div class="sec-full">
     <div style="max-width:500px;margin:0 auto">
       <h2 class="stitle">Quand ?</h2>
       <div class="cdflex">
         <div class="cditem"><span class="cdval" id="cd-d">--</span><span class="cdlbl">Jours</span></div>
         <div class="cditem"><span class="cdval" id="cd-h">--</span><span class="cdlbl">Heures</span></div>
-        <div class="cditem"><span class="cdval" id="cd-m">--</span><span class="cdlbl">Minutes</span></div>
-        <div class="cditem"><span class="cdval" id="cd-s">--</span><span class="cdlbl">Secondes</span></div>
+        <div class="cditem"><span class="cdval" id="cd-m">--</span><span class="cdlbl">Min.</span></div>
+        <div class="cditem"><span class="cdval" id="cd-s">--</span><span class="cdlbl">Sec.</span></div>
       </div>
       <div class="dcards">
         <div class="dcard">
           <div class="dico"><i class="ti ti-calendar-event" aria-hidden="true"></i></div>
           <p class="dlbl">Date</p>
           <p class="dval">Samedi 5 Septembre</p>
-          <p class="ddet">2026 — soirée à partir de 19h</p>
+          <p class="ddet">—2026 — </p>
         </div>
         <div class="dcard">
           <div class="dico"><i class="ti ti-confetti" aria-hidden="true"></i></div>
@@ -150,10 +143,6 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
     </div>
   </div>
 
- 
-
-
-  <!-- LIEU -->
   <div class="sec-full">
     <div style="max-width:500px;margin:0 auto">
       <h2 class="stitle">Où ?</h2>
@@ -173,23 +162,21 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
     </div>
   </div>
 
-  <!-- LA SALLE -->
   <div class="sec-full" style="background:rgba(0,0,0,.15)">
     <div style="max-width:500px;margin:0 auto">
       <h2 class="stitle">La Salle</h2>
       <div class="imgframe">
-        <img src="https://new.express.adobe.com/webpage/ubBoak0mqhdLQ/resources/8b238808-0bbb-4bf7-9bad-55565f1580db-img_6572_png?asset_id=bb70c838-6d89-4387-91b5-23c342920e9b&img_etag=%222d7a0c5a918742a4b5d420b6e7779488%22&image_assets=false&size=2560" alt="Salle de fête décorée" onerror="this.parentElement.innerHTML='<div style=\'height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:#FDF5E6;opacity:.6\'><i class=\'ti ti-photo\' style=\'font-size:3rem;color:#D4AF37\'></i><span>Photo de la salle</span></div>'"/>
+        <img src="https://new.express.adobe.com/webpage/ubBoak0mqhdLQ/resources/8b238808-0bbb-4bf7-9bad-55565f1580db-img_6572_png?asset_id=bb70c838-6d89-4387-91b5-23c342920e9b&img_etag=%222d7a0c5a918742a4b5d420b6e7779488%22&image_assets=false&size=2560" alt="Salle de fête décorée" onerror="this.parentElement.innerHTML='<div style=\'height:220px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:#FDF5E6;opacity:.6\'><i class=\'ti ti-photo\' style=\'font-size:2.5rem;color:#D4AF37\'></i><span>Photo de la salle</span></div>'"/>
       </div>
-      <p class="imgcap">La Salle du Bois II, Nyoiseau — décoration prévue pour la soirée du 5 septembre</p>
-      <div style="margin-top:2rem;display:flex;justify-content:center">
-        <div class="imgframe" style="margin-top:0;max-width:320px;height:480px;overflow:hidden">
+      <p class="imgcap">La Salle du Bois II, Nyoiseau — </p>
+      <div style="margin-top:1.5rem;display:flex;justify-content:center">
+        <div class="imgframe" style="margin-top:0;max-width:100%;height:320px;overflow:hidden">
           <img src="https://new.express.adobe.com/webpage/ubBoak0mqhdLQ/resources/f7017a63-7564-42ba-a120-2e89c29201d4-img_6566_png?asset_id=fc4d8eaf-430b-4800-8482-8abadb920538&img_etag=%22975ea25848a44652a01a15e7c51aaff5%22&image_assets=false&size=1024" alt="Salle vue 2" style="width:100%;height:100%;object-fit:cover;object-position:center;" onerror="this.parentElement.style.display='none'"/>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- RSVP -->
   <div class="sec-full">
     <div style="max-width:500px;margin:0 auto">
       <h2 class="stitle">Présence</h2>
@@ -207,11 +194,10 @@ footer{background:var(--dk);padding:4rem 1.5rem;text-align:center}
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <p class="ftmsg">À très bientôt !</p>
     <div class="ftgline"></div>
-    <div style="font-size:2rem;color:#D4AF37;margin:.75rem 0;opacity:.6">✦ ✦ ✦</div>
+    <div style="font-size:1.5rem;color:#D4AF37;margin:.5rem 0;opacity:.6">✦ ✦ ✦</div>
     <p class="ftsm">LOUIS — 18 ANS — 5 SEPTEMBRE 2026</p>
   </footer>
 
